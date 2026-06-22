@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "time-series-velocity-baseline"
+version = "1.0.0"
+authors = [
+  { name = "Asilia Technical Utility Team", email = "engineering@asilia-utility.org" }
+]
+description = "A decoupled data science library for identifying localized velocity capacity drops and macro-temporal structural anomalies in time-series transactional flows."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+dependencies = [
+    "numpy>=1.22.0",
+    "pandas>=1.4.0",
+    "scipy>=1.8.0",
+    "statsmodels>=0.13.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/asilia-analytics/time-series-velocity-baseline"
