@@ -38,8 +38,9 @@ def calculate_optimized_baseline(df: pd.DataFrame, alpha: float = 0.25) -> pd.Da
             
     df = df.copy()
     df['timestamp'] = pd.to_datetime(df['timestamp'])
+    df = df.sort_values('timestamp')
     df['day_of_week'] = df['timestamp'].dt.dayofweek
-    df['time_window'] = df['timestamp'].dt.floor('15T').dt.time
+    df['time_window'] = df['timestamp'].dt.floor('15min').dt.time
     
     # Suppress extreme transaction variations
     df = suppress_outliers(df, 'volume')
