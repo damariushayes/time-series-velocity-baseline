@@ -46,7 +46,7 @@ def isolate_macro_attrition(df: pd.DataFrame, lambda_threshold: float = 0.1) -> 
         min_c_d = day_of_week_means.min()
         
         # Flag structural validation status
-        is_patterned_closure = 1 if (var_d_c > lambda_threshold and min_c_d -> 0) else 0
+        is_patterned_closure = 1 if (var_d_c > lambda_threshold and min_c_d == 0) else 0
         
         # Evaluate long-term multi-month pipeline decline rate
         recent_trend = trend.iloc[-7:].mean()
